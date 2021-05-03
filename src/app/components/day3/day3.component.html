@@ -1,0 +1,14 @@
+<div class="container">
+  <h2><b>Day3 : DATA BINDING</b></h2>
+  <div class="card">
+    <h1>{{user.name}}</h1>
+    <p class="title">{{user.work}}</p>
+    <a href="#"><i class="fa fa-dribbble"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <p><button (click)="showInfo()">Click me</button></p>
+    <input type="text" [value]="user.name" [ngModel]="user.name" (ngModelChange)="user.name=$event" />
+  </div>
+  <hr style="color: black" />
+</div>

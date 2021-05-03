@@ -1,0 +1,14 @@
+<div class="container">
+  <h2><b>Day 4 : ngIF STRUCTURE DIRECTIVE</b></h2>
+  <div class="box">
+    <p>Name : {{ user.name }}</p>
+    <button (click)="user.age = user.age - 1">-</button>
+    <span> Age : {{ user.age }} </span>
+    <button (click)="user.age = user.age + 1">+</button>
+  </div>
+  <div *ngIf="user.age >= 18; else under18">You can see</div>
+  <ng-template #under18>
+    <div>You are too young</div>
+  </ng-template>
+  <hr />
+</div>
