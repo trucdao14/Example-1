@@ -9,6 +9,9 @@ import { Day4Component } from './components/day4/day4.component';
 import { Day5Component } from './components/day5/day5.component';
 import { Day6Component } from './components/day6/day6.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { Day27Component } from './components/day27/day27.component';
+import { ArticleListComponent } from './components/day27/article-list/article-list.component';
+import { ArticleDetailComponent } from './components/day27/article-detail/article-detail.component';
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     Day5Component,
     Day6Component,
     ProgressBarComponent,
+    Day27Component,
+    ArticleListComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,
