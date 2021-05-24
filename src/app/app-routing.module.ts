@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignInRfComponent } from './components/sign-in-rf/sign-in-rf.component';
 
 const routes: Routes = [
-  {
-    path: 'sign-in-rf', component: SignInRfComponent,
-  }
+
 ];
 
 @NgModule({

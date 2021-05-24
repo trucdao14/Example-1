@@ -1,0 +1,38 @@
+<div class="main-container">
+  <div class="login-card">
+    <main class="login-content">
+      <span class="login-header">Login</span>
+      <form class="login-form" #authform="ngForm" >
+        <input
+          ngModel
+          type="text"
+          name="email"
+          placeholder="Email"
+          required
+          class="login-input"
+        />
+        <input
+          ngModel
+          type="text"
+          name="password"
+          placeholder="Password"
+          required
+          class="login-input"
+        />
+        <input
+          type="submit"
+          name="submit"
+          value="Login"
+          class="login-btn"
+
+        />
+      </form>
+
+      <div>
+        <span>Don't have an account?</span>
+        <a>SIGNUP</a>
+      </div>
+    </main>
+    <aside class="login-aside"></aside>
+  </div>
+</div>
