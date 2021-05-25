@@ -2,9 +2,9 @@
   <div class="login-card">
     <main class="login-content">
       <span class="login-header">Login</span>
-      <form class="login-form" #authform="ngForm" >
+      <form [formGroup] = "userFormGroup" novalidate class="login-form"  >
         <input
-          ngModel
+          userFormControlName = "email" ngModel
           type="text"
           name="email"
           placeholder="Email"
@@ -12,7 +12,7 @@
           class="login-input"
         />
         <input
-          ngModel
+          userFormControlName = "password" ngModel
           type="text"
           name="password"
           placeholder="Password"
@@ -20,7 +20,7 @@
           class="login-input"
         />
         <input
-          type="submit"
+          [disabled] = "userFormGroup.status == 'INVALID'" type="submit"
           name="submit"
           value="Login"
           class="login-btn"
