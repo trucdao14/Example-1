@@ -1,1 +1,33 @@
-<p>signin works!</p>
+<div class="main-container">
+  <div class="login-card">
+    <main class="login-content">
+      <span class="login-header">Sign-in</span>
+      <form [formGroup] = "userFormGroup" novalidate class="login-form"  >
+        <input
+          formControlName = "email"
+          type="text"
+
+          placeholder="Email"
+
+          class="login-input"
+        />
+        <input
+          formControlName = "password"
+          type="text"
+
+          placeholder="Password"
+
+          class="login-input"
+
+        />
+        <input type="submit" class="btn-sub" [class.btn-sub-disable]="!userFormGroup.valid">
+      </form>
+
+      <div>
+        <span>Don't have an account?</span>
+        <a routerLink = "/login">LOGIN</a>
+      </div>
+    </main>
+    <aside class="login-aside"></aside>
+  </div>
+</div>
