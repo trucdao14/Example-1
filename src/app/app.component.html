@@ -1,1 +1,41 @@
-<router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>-->
+<aside class="slide-menu__container" [ngClass]="{'slide-menu__container-active': showMenu}" (click)="toggleMenu()">
+    <nav class="slide-menu" [ngClass]="{'slide-menu-active': showMenu}" (click)="$event.stopImmediatePropagation();">
+        <section class="menu-header">
+            <span class="welcome__text">WELCOME BACK</span>
+            <div class="profile-image__container">
+                <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" class="profile-image">
+            </div>
+            <div class="account">
+                <span class="name__text">TRUC DAO</span>
+                <span class="email__text">letrucdao14@gmail.com</span>
+            </div>
+        </section>
+        <section class="menu-body"></section>
+        <section class="menu-footer"></section>
+    </nav>
+</aside>
+
+<header class="main__header" [ngClass]="{'main__header-dark': darkModeActive}">
+    <div class="left-section">
+        <svg class="hamburger__icon" viewBox="0 0 100 80" width="40" height="40" (click)="toggleMenu()">
+          <rect width="200" height="10"></rect>
+          <rect y="30" width="200" height="10"></rect>
+          <rect y="60" width="200" height="10"></rect>
+        </svg> <img class="logo__icon" src="https://images.viblo.asia/4719b666-2160-4e86-95d0-96855188da10.png">
+    </div>
+    <h3 class="date__text">Today</h3>
+    <div class="mode-toggle__container">
+        <span class="mode-toggle__text">Light</span>
+        <label class="toggle-button__container">
+              <input type="checkbox" class="mode-toggle__input"  (click)="modeToggleSwitch()">
+              <span class="mode-toggle__bg"  [ngClass]="{'mode-toggle__bg-checked':darkModeActive}"></span>
+              <span class="mode-toggle__circle" [ngClass]="{'mode-toggle__circle-checked':darkModeActive}"></span>
+        </label>
+        <span class="mode-toggle__text">Dark</span>
+    </div>
+</header>
+
+<main class="main__container">
+    <div class="main-container__bg" [ngClass]="{'main-container__bg-dark': darkModeActive}"></div>
+</main>

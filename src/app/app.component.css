@@ -1,0 +1,244 @@
+.slide-menu__container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.slide-menu__container-active {
+    pointer-events: auto;
+}
+
+.side-menu__container::before {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0c1066;
+    opacity: 0;
+    transition: opacity 300ms linear;
+    will-change: opacity;
+}
+
+.side-menu__container-active::before {
+    opacity: 0.3;
+}
+
+.slide-menu {
+    box-sizing: border-box;
+    transform: translateX(-200%);
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 4fr 1fr;
+    grid-gap: 1rem;
+    transition: transform 300ms linear;
+    will-change: transform;
+    z-index: 100;
+}
+
+.slide-menu-active {
+    transform: none;
+}
+
+.slide-menu-active-dark {
+    transform: none;
+}
+
+.menu-header {
+    background: linear-gradient(to right, #00FF9B, #5f84fb);
+    display: grid;
+    box-sizing: border-box;
+    width: 100%;
+    align-content: center;
+    color: white;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 255, 0.2);
+}
+
+.welcome__text {
+    margin-left: -3rem;
+    grid-area: greeting;
+    font-size: 2.75rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    margin-top: -11rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.account {
+    grid-area: details;
+    display: flex;
+    flex-flow: column;
+    margin-left: 5rem;
+    align-self: center;
+    margin-bottom: -5rem;
+}
+
+.name__text {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.email__text {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.profile-image__container {
+    grid-area: image;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    align-self: center;
+    margin-left: -5rem;
+    margin-bottom: -5rem;
+}
+
+.profile-image {
+    max-width: 7rem;
+}
+
+.main__header {
+    background-color: #fff;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr .25fr;
+    box-shadow: 0 0 2rem rgb(0 0 255 / 10%);
+    margin: 0;
+    min-height: 7rem;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: background-color 500ms linear;
+    animation: 1s ease-in-out 0ms 1 fadein;
+}
+
+.main__header-dark {
+    background-color: #2B244D;
+    color: white;
+}
+
+.toggle-button__container {
+    cursor: pointer;
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+.mode-toggle__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.mode-toggle__bg {
+    height: 1rem;
+    width: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    transition: background-color 300ms linear;
+}
+
+.mode-toggle__bg-checked {
+    background-color: #FF0070;
+}
+
+.mode-toggle__circle {
+    height: 1.30rem;
+    width: 1.30rem;
+    background-color: #2B244D;
+    position: absolute;
+    top: 0.2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(0, 0, 255, 0.5);
+    transition: left 300ms linear;
+    left: 0;
+}
+
+.mode-toggle__circle-checked {
+    background-color: white;
+    left: 0.75rem;
+}
+
+.mode-toggle__text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.left__section {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    max-width: 5rem;
+}
+
+.date__text {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    display: inline;
+    margin: 0.5rem 0;
+    font-weight: bold
+}
+
+
+/*SVGs*/
+
+.hamburger__icon {
+    position: relative;
+    z-index: 35;
+    height: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.logo__icon {
+    width: 16rem;
+    height: 2rem;
+    position: relative;
+    top: -16px;
+    left: 18px;
+}
+
+.hamburger__icon__fill {
+    fill: #2B244D;
+}
+
+.main-container__bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0;
+    background: white;
+    transition: opacity 300ms linear;
+}
+
+.main-container__bg-dark {
+    opacity: 1;
+    background: linear-gradient(to bottom, #B290FF, #2E1D65);
+    transition: opacity 300ms linear;
+}
