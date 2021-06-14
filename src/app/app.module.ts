@@ -9,6 +9,7 @@ import { SigninComponent } from './components/signin/signin.component';
 import { HomeComponent } from './components/home/home.component';
 import { WeatherCardComponent } from './components/home/weather-card/weather-card.component';
 import { UiService } from './services/ui/ui.service';
+import { AddCardComponent } from './components/home/add-card/add-card.component';
 
 
 
@@ -18,7 +19,8 @@ import { UiService } from './services/ui/ui.service';
     LoginComponent,
     SigninComponent,
     HomeComponent,
-    WeatherCardComponent
+    WeatherCardComponent,
+    AddCardComponent
   ],
   imports: [
     ReactiveFormsModule,

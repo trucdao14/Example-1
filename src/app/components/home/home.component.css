@@ -1,6 +1,6 @@
-/* .one{
-    color: black;
+.main__container {
+    display: flex;
+    flex-flow: row;
+    width: 80%;
+    margin: auto;
 }
-.one-active{
-    color: red;
-} */
