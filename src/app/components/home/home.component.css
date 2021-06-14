@@ -3,4 +3,5 @@
     flex-flow: row;
     width: 80%;
     margin: auto;
+    justify-content: space-around;
 }

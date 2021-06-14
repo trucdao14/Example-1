@@ -7,7 +7,7 @@
     display: grid;
     box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
     padding: 2rem;
     cursor: pointer;
     color: #443282;
@@ -15,12 +15,20 @@
     animation: slideup 1s ease-in-out, fadein 1.5s ease-in-out 0ms 1;
 }
 
-.body__container {
+.header__container {
     display: flex;
+    flex-direction: column;
+}
+
+.body__container {
+    /*display: flex;
     align-self: end;
     justify-content: space-between;
     align-items: center;
-    flex-flow: column
+    flex-flow: column*/
+    font-weight: bold;
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
 }
 
 .add__icon {
@@ -31,8 +39,69 @@
 .card__title {
     text-transform: uppercase;
     letter-spacing: 0.25rem;
+    font-weight: bold;
+    color: black;
+    font-size: 2rem;
 }
 
 .city__illustration {
     width: 20rem;
+}
+
+span.temp__container {
+    /* margin-bottom: 17px; */
+    padding: 25px;
+}
+
+.min-max__container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.min__container,
+.max__container {
+    margin: 1rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.min-arrow__icon,
+.max-arrow__icon {
+    height: 1.25rem;
+    margin: auto;
+}
+
+.max-arrow__icon {
+    margin-bottom: -0.05rem;
+}
+
+.weather-condition__text {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.max__text {
+    color: #FF0070;
+}
+
+.min__text {
+    color: #00FF9B;
+}
+
+.max__text,
+.min__text {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.max-temperature__text,
+.min-temperature__text {
+    text-align: center;
+    font-size: 2rem;
 }
