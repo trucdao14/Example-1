@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { WeatherCardComponent } from './components/home/weather-card/weather-card.component';
 import { UiService } from './services/ui/ui.service';
 import { AddCardComponent } from './components/home/add-card/add-card.component';
+import { AddComponent } from './components/add/add.component';
 
 
 
@@ -20,7 +21,8 @@ import { AddCardComponent } from './components/home/add-card/add-card.component'
     SigninComponent,
     HomeComponent,
     WeatherCardComponent,
-    AddCardComponent
+    AddCardComponent,
+    AddComponent
   ],
   imports: [
     ReactiveFormsModule,

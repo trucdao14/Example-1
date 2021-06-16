@@ -6,7 +6,7 @@
 
 .main-card {
     width: 80%;
-    background: wheat;
+    background: white;
     border-radius: 1rem;
     display: flex;
     margin-top: 1rem;
@@ -25,6 +25,7 @@
     font-size: 3rem;
     font-weight: bold;
     color: darkblue;
+    margin: 7rem 0 4rem 0;
 }
 
 .city-search-header {
@@ -48,7 +49,7 @@
     margin: 2rem;
 }
 
-.search-city-input-wrapper {
+.city-search-input-wrapper {
     position: relative;
     width: 80%;
     box-sizing: border-box;
@@ -57,7 +58,7 @@
 .city-search__input {
     box-sizing: border-box;
     width: 100%;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 3rem;
     outline: none;
     border: none;
@@ -74,15 +75,14 @@
     letter-spacing: 0.1rem;
 }
 
-.search-city-btn {
+.city-search__btn {
     cursor: pointer;
     position: absolute;
     background-color: #31feae;
-    height: 5rem;
-    width: 5rem;
+    height: 6rem;
+    width: 6rem;
     border-radius: 50%;
     right: 0;
-    top: -0.35rem;
     outline: none;
     border: none;
     z-index: 5;
@@ -100,4 +100,120 @@
 
 .fav-city__icon {
     width: 14rem;
+}
+
+.fav-city-wrapper {
+    flex: 1 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    /* justify-content: space-around; */
+    height: 100%;
+    background-color: darkgray;
+}
+
+.fav-city-body,
+.fav-city-header {
+    position: relative;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 3rem;
+}
+
+.fav-city-body-subwrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding-bottom: 5rem;*/
+}
+
+.fav-city-hr {
+    width: 5rem;
+}
+
+.fav-city-title {
+    font-size: 2.85rem;
+    letter-spacing: 0.1rem;
+    word-break: break-all;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+}
+
+.fav-city-title {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.fav-city-date {
+    margin-top: 0.5rem;
+}
+
+.fav-city-temp {
+    font-size: 5rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.fav-city-name {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.fav-weather-icon {
+    width: 7rem;
+    margin-bottom: 4rem;
+}
+
+.fav-city-info {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    margin-top: -2rem;
+}
+
+.fav-city-state {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.fav-city-country {
+    margin-left: 0.75rem;
+}
+
+.fav-city-name-wrapper {
+    margin-bottom: 2rem;
+}
+
+.fav-city-add-btn {
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 2rem;
+    border: 2px solid white;
+    border-radius: 3rem;
+    padding: 1.25rem 2rem;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.fav-city-add-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fav-city-added-btn {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+app-weather-card {
+    margin: 2rem 0;
+    min-width: 28rem;
 }

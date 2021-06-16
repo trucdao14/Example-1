@@ -225,15 +225,18 @@
     fill: #2B244D;
 }
 
-.main-container__bg {
+.main__container {
+    background-color: darkturquoise;
     height: 100%;
     width: 100%;
+}
+
+.main-container__bg {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -2;
     opacity: 0;
-    background: white;
     transition: opacity 300ms linear;
 }
 
