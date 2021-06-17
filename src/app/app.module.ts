@@ -11,6 +11,7 @@ import { WeatherCardComponent } from './components/home/weather-card/weather-car
 import { UiService } from './services/ui/ui.service';
 import { AddCardComponent } from './components/home/add-card/add-card.component';
 import { AddComponent } from './components/add/add.component';
+import {AngularFireLite} from 'angularfire-lite';
 
 
 
@@ -29,10 +30,12 @@ import { AddComponent } from './components/add/add.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireLite
   ],
   providers: [
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
