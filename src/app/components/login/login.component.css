@@ -1,85 +1,93 @@
 .main-container {
-  width: 100%;
-  background-color: aquamarine;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
+
 .login-card {
-  display: flex;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  min-height: 80vh;
-  animation: fadein 1s ease-in-out;
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    min-height: 80vh;
+    animation: fadein 1s ease-in-out;
+    z-index: 1;
 }
+
 .login-content {
-  flex: 2 2;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  animation: fadein 1.5s ease-in-out;
-  min-height: 100%;
+    flex: 2 2;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadein 1.5s ease-in-out;
+    min-height: 100%;
 }
+
 .login-header {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  letter-spacing: 0.2em;
-  color: #0c1066;
-  display: block;
-  animation: fadein 1.75s ease-in-out;
-  text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color: #0c1066;
+    display: block;
+    animation: fadein 1.75s ease-in-out;
+    text-transform: uppercase;
 }
+
 .login-form {
-  display: flex;
-  flex-flow: column;
-  width: 80%;
-  align-items: center;
-  animation: slidedown 2s ease-in-out;
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    align-items: center;
+    animation: slidedown 2s ease-in-out;
 }
-.login-input{
-  border-radius: 25px;
-  margin: 1rem 0;
-  padding: 1.5rem;
-  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
-  border: none;
-  width: 80%;
-  outline: none;
+
+.login-input {
+    border-radius: 25px;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
+    border: none;
+    width: 80%;
+    outline: none;
 }
-.btn-sub{
-  border-radius: 25px;
-  margin: 1rem 0;
-  padding: 1.5rem;
-  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
-  border: none;
-  width: 40%;
-  outline: none;
-  background-color:#00ff9b;
+
+.btn-sub {
+    border-radius: 25px;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
+    border: none;
+    width: 40%;
+    outline: none;
+    background-color: #00ff9b;
 }
-.btn-sub-disable{
-  border-radius: 25px;
-  margin: 1rem 0;
-  padding: 1.5rem;
-  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
-  border: none;
-  width: 40%;
-  outline: none;
-  background: lightgray;
+
+.btn-sub-disable {
+    border-radius: 25px;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
+    border: none;
+    width: 40%;
+    outline: none;
+    background: lightgray;
 }
-.login-aside{
-  animation: fadein 2.25s ease-in-out;
-  flex: 3 3;
-  display: flex;
-  justify-content: flex-end;
-  flex-flow: column;
-  min-height: 100%;
-  border-radius: 0 10px 10px 0;
-  background: url("https://source.unsplash.com/random/1200x900?beach") no-repeat center center;
-  background-size: cover;
-  position: relative;
+
+.login-aside {
+    animation: fadein 2.25s ease-in-out;
+    flex: 3 3;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column;
+    min-height: 100%;
+    border-radius: 0 10px 10px 0;
+    background: url("https://source.unsplash.com/random/1200x900?beach") no-repeat center center;
+    background-size: cover;
+    position: relative;
 }

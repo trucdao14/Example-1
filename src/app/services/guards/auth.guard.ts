@@ -8,11 +8,10 @@ import { FbService } from '../fb/fb.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  router: any;
-  constructor(public fb: FbService, router: Router){}
+  constructor(public fb: FbService, public router: Router){}
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    state: RouterStateSnapshot): Observable<boolean> {
     return this.fb.isAuth().pipe(map(
       auth => {
         if (!auth){

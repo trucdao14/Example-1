@@ -11,7 +11,13 @@ import { WeatherCardComponent } from './components/home/weather-card/weather-car
 import { UiService } from './services/ui/ui.service';
 import { AddCardComponent } from './components/home/add-card/add-card.component';
 import { AddComponent } from './components/add/add.component';
-import {AngularFireLite} from 'angularfire-lite';
+import { AngularFireLite, AngularFireLiteApp } from 'angularfire-lite';
+import { AppGuard } from '../app/services/guards/app.guard';
+import { AuthGuard } from '../app/services/guards/auth.guard';
+import { FbService } from '../app/services/fb/fb.service';
+import { AngularFireLiteFirestore, AngularFireLiteAuth} from 'angularfire-lite';
+import { environment } from 'src/environments/environment';
+
 
 
 
@@ -31,9 +37,15 @@ import {AngularFireLite} from 'angularfire-lite';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    AngularFireLite
+    AngularFireLite.forRoot(environment.config),
   ],
   providers: [
+    AppGuard,
+    AuthGuard,
+    FbService,
+    AngularFireLiteAuth,
+    AngularFireLiteFirestore,
+    AngularFireLiteApp,
   ],
   bootstrap: [AppComponent]
 })

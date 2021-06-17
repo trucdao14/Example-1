@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { Injectable, Injector } from '@angular/core';
+import { inject } from '@angular/core/testing';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { FbService } from '../fb/fb.service';
@@ -8,8 +9,8 @@ import { FbService } from '../fb/fb.service';
   providedIn: 'root'
 })
 export class AppGuard implements CanActivate {
-  router: any;
-  constructor( public fb: FbService, router: Router){}
+
+  constructor( public fb: FbService, public router: Router){}
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean>{
@@ -20,6 +21,7 @@ export class AppGuard implements CanActivate {
         }
         else {
           this.router.navigate(['/login']);
+
           return false;
         }
       }
