@@ -1,33 +1,18 @@
 <div class="main-container">
-  <div class="login-card">
-    <main class="login-content">
-      <span class="login-header">Sign-in</span>
-      <form [formGroup] = "userFormGroup" novalidate class="login-form"  >
-        <input
-          formControlName = "email"
-          type="text"
+    <div class="login-card">
+        <main class="login-content">
+            <span class="login-header">Signin</span>
+            <form [formGroup]="userFormGroup" (ngSubmit)="signup($event)" novalidate class="login-form">
+                <input formControlName="email" type="text" placeholder="Email" class="login-input" name="email" />
+                <input formControlName="password" type="text" placeholder="Password" class="login-input" name="password" />
+                <input type="submit" name="submit" value="Login" class="btn-sub" [class.btn-sub-disable]="!userFormGroup.valid">
+            </form>
 
-          placeholder="Email"
-
-          class="login-input"
-        />
-        <input
-          formControlName = "password"
-          type="text"
-
-          placeholder="Password"
-
-          class="login-input"
-
-        />
-        <input type="submit" class="btn-sub" [class.btn-sub-disable]="!userFormGroup.valid">
-      </form>
-
-      <div>
-        <span>Don't have an account?</span>
-        <a routerLink = "/login">LOGIN</a>
-      </div>
-    </main>
-    <aside class="login-aside"></aside>
-  </div>
+            <div>
+                <span>Don't have an account?</span>
+                <a routerLink="/sign-in">SIGNUP</a>
+            </div>
+        </main>
+        <aside class="login-aside"></aside>
+    </div>
 </div>
