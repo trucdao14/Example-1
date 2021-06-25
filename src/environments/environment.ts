@@ -4,15 +4,16 @@
 
 export const environment = {
   production: false,
-  appID: '',
-  config: {
-    apiKey: 'process.env.API_KEY',
-    authDomain: 'process.env.AUTH_DOMAIN',
-    databaseURL: 'process.env.DBURL',
-    projectId: 'process.env.PID',
-    storageBucket: 'process.env.BUCKET',
-    messagingSenderId: 'process.env.MSGID'
-  }
+  firebaseConfig : {
+  apiKey:  'AIzaSyBPY_91v09z6Gk0Sf1Vb6FvXbZwtwm9bD4',
+  authDomain: 'weather-2d7ba.firebaseapp.com',
+  databaseUrl : 'https://weather-2d7ba-default-rtdb.firebaseio.com/',
+  projectId: 'weather-2d7ba',
+  storageBucket: 'weather-2d7ba.appspot.com',
+  messagingSenderId: '900073330747',
+  appId: '1:900073330747:web:15b7397f2437217d07641e',
+  measurementId: 'G-RCHFEFS37T'
+}
 };
 
 /*

@@ -1,7 +1,9 @@
 .main__container {
     display: flex;
-    flex-flow: row;
-    width: 80%;
-    margin: auto;
     justify-content: space-around;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 90vh;
+    position: relative;
 }

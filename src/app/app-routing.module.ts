@@ -20,9 +20,7 @@ const routes: Routes = [
   {
     path: 'add', component: AddComponent, canActivate: [AppGuard]
   },
-  {path: '**', redirectTo: ''}
-
-];
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

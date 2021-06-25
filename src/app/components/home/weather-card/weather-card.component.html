@@ -1,6 +1,6 @@
 <div class="add__card">
     <div class="header__container">
-        <span class="card__title">ROME</span>
+        <span class="card__title">{{cityName}}</span>
     </div>
     <div class="icon__container">
         <svg class="add__icon" viewBox="3487.9 -810.7 291.2 200.3">
@@ -29,8 +29,8 @@
       </svg>
     </div>
     <div class="body__container">
-        <span class="temp__container">24°</span>
-        <span class="state-temp__container">Clouds</span>
+        <span class="temp__container">{{temp}}°</span>
+        <span class="state-temp__container">{{state}}</span>
         <section class="min-max__container">
             <div class="min__container">
                 <svg class="min-arrow__icon" viewBox="188.5 807 21 21">
@@ -48,6 +48,7 @@
                 <span class="max__text">Max</span>
             </div>
         </section>
+        <button class="add-city-btn" *ngIf="addMode" (click)="addCity()">ADD CITY +</button>
     </div>
 
 </div>

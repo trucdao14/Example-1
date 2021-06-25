@@ -17,6 +17,10 @@ import { AuthGuard } from '../app/services/guards/auth.guard';
 import { FbService } from '../app/services/fb/fb.service';
 import { AngularFireLiteFirestore, AngularFireLiteAuth} from 'angularfire-lite';
 import { environment } from 'src/environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { MatAutocompleteModule} from '@angular/material/autocomplete';
+
+
 
 
 
@@ -37,7 +41,9 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    AngularFireLite.forRoot(environment.config),
+    AngularFireLite.forRoot(environment.firebaseConfig),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    MatAutocompleteModule,
   ],
   providers: [
     AppGuard,

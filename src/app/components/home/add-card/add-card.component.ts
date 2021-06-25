@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { first } from 'rxjs/operators';
+import { FbService } from 'src/app/services/fb/fb.service';
 import {UiService} from '../../../services/ui/ui.service';
 
 
@@ -21,7 +24,6 @@ export class AddCardComponent implements OnInit {
     this.sub1 = this.ui.darkModeState.subscribe((isDark) => {
       this.darkMode = isDark;
     });
+
   }
-
-
 }

@@ -8,6 +8,7 @@ import {UiService} from './services/ui/ui.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent  implements OnInit{
+  @Input() userText: string;
   title = 'app';
   showMenu = false;
   darkModeActive: boolean | undefined;
