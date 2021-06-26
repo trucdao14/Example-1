@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   login(e: { target: { email: { value: string; }; password: { value: string; }; }; }){
     this.fb.signin(e.target.email.value, e.target.password.value).pipe(first()).subscribe(
       () => {
-        this.router.navigateByUrl(' ');
+        this.router.navigateByUrl('');
       }, (err) => {
         this.errorMessage = err;
         setTimeout(() => this.errorMessage = '', 2000);

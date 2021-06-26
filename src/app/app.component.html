@@ -8,11 +8,20 @@
             </div>
             <div class="account">
                 <span class="name__text">User</span>
-                <span class="email__text">{{userText}}</span>
+                <span class="email__text">{{userEmail}}</span>
             </div>
         </section>
-        <section class="menu-body"></section>
-        <section class="menu-footer"></section>
+        <section class="menu-body">
+            <ul class="menu-links" [ngClass]="{'menu-links-dark': darkModeActive}">
+                <li class="menu-link" [routerLinkActiveOptions]="{exact:true}" routerLink="" routerLinkActive="link-active" (click)="toggleMenu()">Home</li>
+                <li class="menu-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/add" routerLinkActive="link-active" (click)="toggleMenu()">Add City</li>
+                <li (click)="logout()" class="menu-link">Logout</li>
+            </ul>
+        </section>
+        <section class="menu-footer">
+
+            <small class="copyright__text">Copyright © 2019 Minimus</small>
+        </section>
     </nav>
 </aside>
 
