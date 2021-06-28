@@ -105,3 +105,15 @@ span.temp__container {
     text-align: center;
     font-size: 2rem;
 }
+
+.add-city-btn {
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 2rem;
+    border: 2px solid white;
+    border-radius: 3rem;
+    padding: 1.25rem 2rem;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+}

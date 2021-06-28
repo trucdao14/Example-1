@@ -32,6 +32,8 @@ export class WeatherCardComponent implements OnInit {
       (payload) => {
         this.state = payload.weather[0].main;
         this.temp = Math.ceil(payload.main.temp);
+        this.minTemp = Math.ceil(payload.main.temp_min);
+        this.maxTemp = Math.ceil(payload.main.temp_max);
       }, (err) => {
         this.errorMessage = err.error.message;
         setTimeout(() => {

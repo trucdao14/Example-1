@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { first, map, startWith } from 'rxjs/operators';
 import { FbService } from 'src/app/services/fb/fb.service';
@@ -13,7 +13,7 @@ import { WeatherService } from 'src/app/services/ui/weather.service';
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css']
 })
-export class AddComponent implements OnInit {
+export class AddComponent implements OnInit, OnDestroy {
 
   temp: number;
   city = 'Rome';
@@ -24,6 +24,7 @@ export class AddComponent implements OnInit {
   showNote = false;
   followedCM = false;
   sub1: any;
+  date = Date();
 
   constructor(public http: HttpClient, public fb: FbService, public weather: WeatherService) { }
   control = new FormControl();
@@ -57,5 +58,15 @@ export class AddComponent implements OnInit {
       this.showNote = true;
       alert (city);
     }
+  }
+  // tslint:disable-next-line:typedef
+  addCityOfTheMonth() {
+    this.fb.addCity('Rome').subscribe(() => {
+      this.followedCM = true;
+    });
+  }
+  // tslint:disable-next-line:typedef
+  ngOnDestroy() {
+    this.sub1.unsubscribe();
   }
   }

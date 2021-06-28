@@ -4,7 +4,7 @@
             <span class="login-header">Login</span>
             <form [formGroup]="userFormGroup" (ngSubmit)="login($event)" novalidate class="login-form">
                 <input formControlName="email" type="text" placeholder="Email" class="login-input" name="email" />
-                <input formControlName="password" type="text" placeholder="Password" class="login-input" name="password" />
+                <input formControlName="password" type="password" placeholder="Password" class="login-input" name="password" />
                 <input type="submit" name="submit" value="Login" class="btn-sub" [class.btn-sub-disable]="!userFormGroup.valid">
             </form>
 
@@ -13,6 +13,10 @@
                 <a routerLink="/sign-in">SIGNUP</a>
             </div>
         </main>
-        <aside class="login-aside"></aside>
+        <aside class="login-aside">
+            <div class="login-aside-overlay"></div>
+            <h1 class="login-welcome-text">Welcome Back!</h1>
+            <hr class="login-aside-hr">
+        </aside>
     </div>
 </div>
